@@ -1,0 +1,6 @@
+.navList {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+    align-items: center;
+}

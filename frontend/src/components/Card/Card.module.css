@@ -1,0 +1,54 @@
+.card {
+    width: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.card img {
+    width: 300px;
+    max-height: 600px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+.Card {
+  cursor: pointer;
+  perspective: 1000px;
+  width: 400px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px; /* Добавьте перспективу для эффекта переворота */
+}
+
+.CardFace,
+.CardBack {
+  width: 400px; /* Установите ширину карты */
+  height: 150px; /* Установите высоту карты */
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.CardBack {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.CardFace {
+  backface-visibility: hidden;
+  transform: rotateY(180deg); /* Переверните лицевую сторону */
+}
+.card img {
+    width: 300px;
+    max-height: 600px;
+    object-fit: contain;
+    margin-bottom: 30px;
+}

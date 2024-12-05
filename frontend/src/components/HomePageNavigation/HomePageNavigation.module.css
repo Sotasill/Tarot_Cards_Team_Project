@@ -1,0 +1,32 @@
+.navList {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-evenly; /* Элементы будут равномерно распределены по горизонтали */
+  align-items: center;
+  margin-top: 40px; 
+  margin-bottom: 40px;/* Центрируем элементы по вертикали */
+}
+
+.navItem {
+  display: flex; /* Используем flexbox для navItem */
+  flex-direction: column; /* Располагаем элементы по вертикали */
+  align-items: center; /* Центрируем содержимое по горизонтали */
+  position: relative; /* Для абсолютного позиционирования текста */
+}
+
+.navImage {
+  /* Задайте ширину изображения */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+  margin-bottom: 8px; /* Отступ между изображением и текстом */
+}
+
+.navLink {
+  display: none; /* Скрываем ссылку по умолчанию */
+  text-align: center; /* Центрируем текст в элементе */
+}
+
+.navItem:hover .navLink {
+  display: block; /* Показываем ссылку при наведении на элемент navItem */
+}

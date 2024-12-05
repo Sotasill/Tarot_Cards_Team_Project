@@ -1,0 +1,17 @@
+.PromptContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 40px;
+  gap: 30px;
+}
+
+.PromptContainer input {
+    width: 200px;
+    height: 40px;
+     border: 1px solid black;
+  border-radius: 4px;
+}

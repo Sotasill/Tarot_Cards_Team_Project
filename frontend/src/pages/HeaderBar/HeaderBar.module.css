@@ -1,0 +1,95 @@
+.NavWrapper {
+    display: flex;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.NavWrapper ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+
+.NavAbout {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    gap: 40px;
+    padding-right: 400px;
+}
+
+.NavAboutSocial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+}
+
+
+
+.LanguageSwitcher {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Выравнивание вправо */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px; /* Ширина переключателя */
+  height: 34px; /* Высота переключателя */
+}
+
+.switch input {
+  opacity: 0; /* Скрываем стандартный чекбокс */
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc; /* Цвет фона выключенного состояния */
+  transition: .4s; /* Плавный переход */
+  border-radius: 34px; /* Округлые края */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px; /* Высота кнопки переключения */
+  width: 26px; /* Ширина кнопки переключения */
+  left: 4px; /* Отступ слева */
+  bottom: 4px; /* Отступ снизу */
+  background-color: white; /* Цвет кнопки переключения */
+  transition: .4s; /* Плавный переход */
+  border-radius: 50%; /* Круглая форма */
+}
+
+/* Когда переключатель включен */
+input:checked + .slider {
+  background-color: #4caf50; /* Цвет фона включенного состояния */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Смещение кнопки переключения */
+}
+
+.round {
+  border-radius: 34px; /* Округление для переключателя */
+}
