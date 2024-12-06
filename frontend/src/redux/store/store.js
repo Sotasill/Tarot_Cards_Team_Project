@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import languageReducer from "../language/languageSlice"; // Импортируем редюсер языка
+import authReducer from '../auth/slice'; // Import your auth slice
+import languageReducer from "../language/languageSlice"; // Import your language slice
 
 const store = configureStore({
   reducer: {
-    language: languageReducer, // Добавляем редюсер языка
-    // другие редюсеры...
+    auth: authReducer, // Add auth reducer
+    language: languageReducer, // Add language reducer
   },
 });
 

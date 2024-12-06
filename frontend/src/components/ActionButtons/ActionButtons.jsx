@@ -3,7 +3,7 @@ import css from "./ActionButtons.module.css";
 import { useTranslation } from "react-i18next";
 import PropTypes from 'prop-types';
 
-const ActionButtons = ({ onRefresh, isUserLoggedIn }) => {
+const ActionButtons = ({ onRefresh, isUserLoggedIn, reloadCount }) => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
@@ -12,7 +12,7 @@ const ActionButtons = ({ onRefresh, isUserLoggedIn }) => {
       <button onClick={() => navigate(-1)} className={css.button}>
         {t("goBack")}
       </button>
-      <button onClick={onRefresh} className={css.button}>
+      <button onClick={onRefresh} className={css.button} disabled={!isUserLoggedIn && reloadCount >= 5}>
         {t("reload")}
       </button>
       <button disabled={!isUserLoggedIn} className={css.button}>
@@ -25,6 +25,7 @@ const ActionButtons = ({ onRefresh, isUserLoggedIn }) => {
 ActionButtons.propTypes = {
   onRefresh: PropTypes.func.isRequired,
   isUserLoggedIn: PropTypes.bool.isRequired,
+  reloadCount: PropTypes.number.isRequired,
 };
 
 export default ActionButtons;

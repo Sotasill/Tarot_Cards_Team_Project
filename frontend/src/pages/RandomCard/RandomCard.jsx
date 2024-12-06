@@ -1,30 +1,17 @@
+import { useTranslation } from "react-i18next";
 import CardList from "../../components/CardList/CardList";
-import PageNavigation from "../../components/PageNavigation/PageNavigation";
 import HeaderBar from "../HeaderBar/HeaderBar";
-import ActionButtons from "../../components/ActionButtons/ActionButtons";
-import { useState } from "react";
 
-function TarotFortuneTeller() {
-  const [refreshKey, setRefreshKey] = useState(0); // Ключ для перерисовки компонента
-
-  const handleRefresh = () => {
-    setRefreshKey((prevKey) => prevKey + 1); // Увеличиваем ключ для ререндеринга
-  };
-
-  const isUserLoggedIn = false; // Определите статус авторизации пользователя
+function RandomCard() {
+  const { t } = useTranslation();
 
   return (
     <div>
       <HeaderBar />
-      <PageNavigation />
-      <CardList numberOfCards={1} key={refreshKey} />{" "}
-      {/* Передаем ключ для перерисовки */}
-      <ActionButtons
-        onRefresh={handleRefresh}
-        isUserLoggedIn={isUserLoggedIn}
-      />
+      <h1>{t("randomCard")}</h1>
+      <CardList numberOfCards={1} /> {/* Show 1 card for Random Card Prediction */}
     </div>
   );
 }
 
-export default TarotFortuneTeller;
+export default RandomCard;
